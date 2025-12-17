@@ -23,17 +23,6 @@ function selectUsers<Keys extends typeof ClientAccessibleKeys>(keys: Keys) {
   ) as { [K in Keys[number]]: (typeof users._.columns)[K] };
 
   return db.select(select).from(users);
-
-  // Optional
-  /*
-  const OutputSchema = UsersSchema.pick(
-    Object.fromEntries([...selectKeys].map((key) => [key, true])),
-  );
-
-  const validated = OutputSchema.parse(output);
-
-  return validated;
-  */
 }
 
 function createUsersSelectSchema<Keys extends typeof ClientAccessibleKeys>(
