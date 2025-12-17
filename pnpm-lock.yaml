@@ -17,6 +17,9 @@ importers:
       drizzle-orm:
         specifier: 1.0.0-beta.2-58a4521
         version: 1.0.0-beta.2-58a4521(@electric-sql/pglite@0.3.14)(@types/mssql@9.1.8)(mssql@11.0.1)
+      drizzle-zod:
+        specifier: ^0.8.3
+        version: 0.8.3(drizzle-orm@1.0.0-beta.2-58a4521(@electric-sql/pglite@0.3.14)(@types/mssql@9.1.8)(mssql@11.0.1))(zod@4.1.13)
       zod:
         specifier: ^4.1.13
         version: 4.1.13
@@ -591,6 +594,12 @@ packages:
         optional: true
       sqlite3:
         optional: true
+
+  drizzle-zod@0.8.3:
+    resolution: {integrity: sha512-66yVOuvGhKJnTdiqj1/Xaaz9/qzOdRJADpDa68enqS6g3t0kpNkwNYjUuaeXgZfO/UWuIM9HIhSlJ6C5ZraMww==}
+    peerDependencies:
+      drizzle-orm: '>=0.36.0'
+      zod: ^3.25.0 || ^4.0.0
 
   ecdsa-sig-formatter@1.0.11:
     resolution: {integrity: sha512-nagl3RYrbNv6kQkeJIpt6NJZy8twLB/2vtz6yN9Z4vRKHN4/QZJIEbqohALSgwKdnksuY3k5Addp5lg8sVoVcQ==}
@@ -1183,6 +1192,11 @@ snapshots:
       mssql: 11.0.1
     optionalDependencies:
       '@electric-sql/pglite': 0.3.14
+
+  drizzle-zod@0.8.3(drizzle-orm@1.0.0-beta.2-58a4521(@electric-sql/pglite@0.3.14)(@types/mssql@9.1.8)(mssql@11.0.1))(zod@4.1.13):
+    dependencies:
+      drizzle-orm: 1.0.0-beta.2-58a4521(@electric-sql/pglite@0.3.14)(@types/mssql@9.1.8)(mssql@11.0.1)
+      zod: 4.1.13
 
   ecdsa-sig-formatter@1.0.11:
     dependencies:

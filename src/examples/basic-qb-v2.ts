@@ -1,5 +1,5 @@
 //index.ts
-import { db } from "./db.js";
+import { db } from "../db.js";
 
 await db.query.posts
   .findMany({
