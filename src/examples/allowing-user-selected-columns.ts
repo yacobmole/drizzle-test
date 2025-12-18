@@ -1,4 +1,3 @@
-//index.ts
 import { createSelectSchema } from "drizzle-zod";
 import { db } from "../db.js";
 import { users } from "../schema.js";

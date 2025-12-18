@@ -1,4 +1,3 @@
-//index.ts
 import { db } from "../db.js";
 
 await db.query.posts
@@ -7,7 +6,7 @@ await db.query.posts
       author: true,
     },
   })
-  .then(console.log);
+  .then((s) => console.log(s));
 
 await db.query.users
   .findMany({
@@ -15,4 +14,4 @@ await db.query.users
       posts: true,
     },
   })
-  .then(console.log);
+  .then((s) => console.log(s));
